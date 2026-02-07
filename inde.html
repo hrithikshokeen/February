@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaan Pakad Ke Sorry 🥺</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom, #ffe6ea, #fff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Segoe UI", sans-serif;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 22px;
+      max-width: 440px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .emoji {
+      font-size: 60px;
+      animation: shake 1.2s infinite;
+    }
+
+    h1 {
+      color: #e63946;
+      margin: 10px 0;
+      font-size: 30px;
+    }
+
+    p {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 26px;
+      border: none;
+      border-radius: 25px;
+      background: #e63946;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #d62839;
+    }
+
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+      75% { transform: rotate(-5deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="emoji">🙇‍♂️🤲👂</div>
+
+    <h1>Kaan Pakad Ke Sorry 🥺</h1>
+
+    <p>
+      Aaj main utna baat nahi kar paaya<br>
+      jitna tum chah rahi thi…<br><br>
+
+      jaan-bhoojh ke nahi tha, promise 💔<br>
+      tumhari importance kabhi kam nahi hogi ❤️
+    </p>
+
+    <button onclick="forgiveMe()">Maaf kar dogi? 🥹</button>
+  </div>
+
+  <script>
+    function forgiveMe() {
+      alert("Thank you meri jaan ❤️\nAaj thoda kam, kal extra baat 😌");
+    }
+  </script>
+</body>
+</html>
