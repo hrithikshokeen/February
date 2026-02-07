@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Rose Day ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom, #ffe6eb, #fff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .tap-screen {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, #ffe6eb, #fff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 5;
+      cursor: pointer;
+    }
+
+    .tap-box {
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .tap-box h1 {
+      color: #e63946;
+      margin-bottom: 10px;
+    }
+
+    .tap-box p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 420px;
+      z-index: 2;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 0.6s ease;
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    h2 {
+      color: #e63946;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .valentine {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #e63946;
+      font-size: 18px;
+    }
+
+    .rose {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tap to Open Screen -->
+  <div class="tap-screen" onclick="openCard()">
+    <div class="tap-box">
+      <h1>For Meenu 🌹</h1>
+      <p>Tap to open</p>
+    </div>
+  </div>
+
+  <!-- Main Card -->
+  <div class="card" id="card">
+    <h2>Happy Rose Day, Meenu ❣️</h2>
+    <p>
+      I know things are heavy around you right now, and I didn’t want to do
+      anything that might feel overwhelming.
+      <br><br>
+      But I couldn’t let today pass without telling you this —
+      I’ve loved you since the day I first saw you, and even more since the day
+      we really started talking.
+      <br><br>
+      So here are a hundred roses, quietly, just for you 🌹
+    </p>
+    <div class="valentine">
+      Will you be my Valentine again? ❤️
+    </div>
+  </div>
+
+  <script>
+    function openCard() {
+      document.querySelector('.tap-screen').style.display = 'none';
+      const card = document.getElementById('card');
+      card.classList.add('show');
+
+      const roses = 100;
+      for (let i = 0; i < roses; i++) {
+        const rose = document.createElement("div");
+        rose.classList.add("rose");
+        rose.innerText = "🌹";
+        rose.style.left = Math.random() * 100 + "vw";
+        rose.style.animationDuration = 3 + Math.random() * 5 + "s";
+        rose.style.opacity = Math.random();
+        document.body.appendChild(rose);
+      }
+    }
+  </script>
+
+</body>
+</html>
